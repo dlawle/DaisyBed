@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "ES_Daisy_Patch_SM_FB_Rev1")(type "KiCad")(uri "/Users/dlawle/synth/ES_Daisy_Patch_SM_Init_Rev1/KiCad_PCB/ES_Daisy_Patch_SM_FB_Rev1.pretty")(options "")(descr ""))
+  (lib (name "benjiaomodular")(type "KiCad")(uri "/Users/dlawle/synth/kicadlib/KiCadLibraries-main/benjiaomodular.pretty")(options "")(descr ""))
+)

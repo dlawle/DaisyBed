@@ -1,0 +1,83 @@
+
+(rules PCB daisy_bed
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 7)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 500.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 200.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    "AUDIO_IN_L" "unconnected-(J1-PadNORM)" gnd "GATE_OUT_1" "unconnected-(J2-PadNORM)" "AUDIO_IN_R" "unconnected-(J3-PadNORM)" "AUDIO_OUT_L"
+    "unconnected-(J4-PadNORM)" "AUDIO_OUT_R" "unconnected-(J5-PadNORM)" "GATE_OUT_2" "unconnected-(J6-PadNORM)" "GATE_IN_2" "unconnected-(J7-PadNORM)" "GATE_IN_1"
+    "unconnected-(J8-PadNORM)" "CV_OUT_1" "unconnected-(J9-PadNORM)" "CV_OUT_2" "unconnected-(J10-PadNORM)" CV5 "unconnected-(J11-PadNORM)" CV6
+    "unconnected-(J12-PadNORM)" CV7 "unconnected-(J13-PadNORM)" CV8 "unconnected-(J14-PadNORM)" +12v "-12v" "GPIO_A9"
+    "Net-(LED1-PadK)" "GPIO_D7" "Net-(LED2-PadK)" "GPIO_D6" "Net-(LED3-PadK)" "GPIO_D4" "Net-(LED4-PadK)" "Net-(LED5-PadK)"
+    "GPIO_D3" "Net-(LED6-PadK)" "GPIO_D2" "Net-(LED7-PadK)" "GPIO_D1" "Net-(LED8-PadK)" "GPIO_A8" "GPIO_D10"
+    CV11 CV12 CV1 CV2 CV3 CV4 "I2C_SCL" +3v3
+    CV9 CV10 +5v "GPIO_D5"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
