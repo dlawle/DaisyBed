@@ -1,0 +1,136 @@
+{
+	"name": "daisy_bed",
+	"som": "patch_sm",
+	"defines": {},
+	"audio": {
+		"channels": 2
+	},
+	"components": {
+
+		"gen_led1": {
+			"component": "Led",
+			"pin": "D7"
+		},
+		"gen_led2": {
+			"component": "Led",
+			"pin": "A9"
+		},
+		"cv_led1": {
+			"component": "Led",
+			"pin": "D2"
+		},
+		"cv_led2": {
+			"component": "Led",
+			"pin": "D1"
+		},
+		"gate_in_led1": {
+			"component": "Led",
+			"pin": "D3"
+		},
+		"gate_in_led2": {
+			"component": "Led",
+			"pin": "D5"
+		},
+		"b1": {
+			"component": "Switch",
+			"pin": "A8"
+		},
+		"b2": {
+			"component": "Switch",
+			"pin": "D10"
+		},
+		"cv_1": {
+			"component": "AnalogControl",
+			"pin": "C5",
+			"default": true
+		},
+		"cv_2": {
+			"component": "AnalogControl",
+			"pin": "C4",
+			"default": true
+		},
+		"cv_3": {
+			"component": "AnalogControl",
+			"pin": "C3",
+			"default": true
+		},
+		"cv_4": {
+			"component": "AnalogControl",
+			"pin": "C2",
+			"default": true
+		},
+		"adc_9": {
+			"component": "AnalogControl",
+			"pin": "A2",
+			"default": true
+		},
+		"adc_10": {
+			"component": "AnalogControl",
+			"pin": "A3",
+			"default": true
+		},
+		"adc_11": {
+			"component": "AnalogControl",
+			"pin": "D9",
+			"default": true
+		},
+		"adc_12": {
+			"component": "AnalogControl",
+			"pin": "D8",
+			"default": true
+		},
+		"cv_out_1": {
+			"component": "CVOuts",
+			"pin": "C10"
+		},
+		"cv_out_2": {
+			"component": "CVOuts",
+			"pin": "C1"
+		},
+		"cv_in_1": {
+			"component": "AnalogControl",
+			"pin": "C6",
+			"default": true
+		},
+		"cv_in_2": {
+			"component": "AnalogControl",
+			"pin": "C7",
+			"default": true
+		},
+		"cv_in_3": {
+			"component": "AnalogControl",
+			"pin": "C8",
+			"default": true
+		},
+		"cv_in_4": {
+			"component": "AnalogControl",
+			"pin": "C9",
+			"default": true
+		},
+		"gate_in_1": {
+			"component": "GateIn",
+			"pin": "B10",
+			"default": true
+		},
+		"gate_in_2": {
+			"component": "GateIn",
+			"pin": "B9",
+			"default": true
+		},
+		"gate_out_1": {
+			"component": "GateOut",
+			"pin": "B5",
+			"display": "",
+			"default": true
+		},
+		"gate_out_2": {
+			"component": "GateOut",
+			"pin": "B6",
+			"display": "",
+			"default": true
+		}
+	},
+	"aliases": {
+
+	}
+}
